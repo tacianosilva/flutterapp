@@ -27,6 +27,11 @@ Shape shapeFactory(String type) {
   throw 'Can\'t create $type.';
 }
 
+class CircleMock implements Circle {
+  num area;
+  num radius;
+}
+
 main() {
   final circle = Circle(3);
   final square = Square(3);
@@ -36,4 +41,8 @@ main() {
   final square2 = shapeFactory('square');
   print(circle2.area);
   print(square2.area);
+  final circle3 = Shape('circle');
+  final square3 = Shape('square');
+  print(circle3.area);
+  print(square3.area);
 }
